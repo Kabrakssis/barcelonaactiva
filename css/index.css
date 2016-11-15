@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -125,3 +126,15 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+=======
+#bg_login{
+    background: url(img/fondologin.png)no-repeat;
+    background-size: cover;
+    position: fixed; 
+    top:0; 
+    left:0;
+    width: 100%;
+}
+#bg_login.bgwidth{ width: 100%; }
+#bg_login.bgheight{ height: 100%; }
+>>>>>>> 1838026bfe0016f01d78a45c7b98c4b57abbfbfc
