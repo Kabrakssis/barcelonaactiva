@@ -47,15 +47,15 @@ body {
 
 /* Portrait layout (default) */
 .app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    background:url(../img/barcelona1.png) no-repeat center top; /* 170px x 200px */
     position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
+    left:40%;
+    top:30%;
+    height:60px;                   /* text area height */
+    width:300px;                   /* text area width */
     text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+    padding:350px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-130px -50px -50px -112px;  /* offset vertical: half of image height and text area height */
                                    /* offset horizontal: half of text area width */
 }
 
@@ -69,6 +69,16 @@ body {
     }
 }
 
+
+positionlet {
+    font-size:36px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:50px;
+    text-align:center;  
+}
+
 h1 {
     font-size:24px;
     font-weight:normal;
@@ -76,6 +86,8 @@ h1 {
     overflow:visible;
     padding:0px;
     text-align:center;
+    padding:350px 0px 0px 0px;
+    margin:-130px 0px 0px -112px;
 }
 
 .event {
@@ -83,7 +95,7 @@ h1 {
     -webkit-border-radius:4px;
     color:#FFFFFF;
     font-size:12px;
-    margin:0px 30px;
+    margin:30px 30px;
     padding:2px 0px;
 }
 
