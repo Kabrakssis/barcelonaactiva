@@ -28,7 +28,6 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         //this.receivedEvent('deviceready');
-        mostrarlogin();
     },
 
     // Update DOM on a Received Event
@@ -42,6 +41,7 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
+    
 };
-
+    
 app.initialize();

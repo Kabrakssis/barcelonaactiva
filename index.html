@@ -28,27 +28,90 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' yourhost.com ws://localhost:35729 data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *;script-src 'self' localhost:35729 'unsafe-eval' 'unsafe-inline';">
+        
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+        
+        <link rel="stylesheet" type="text/css" href="js/jquerymobile/jquery.mobile-1.4.5.min.css" />
+        <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+        <script type="text/javascript" src="js/jquerymobile/jquery.mobile-1.4.5.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
         
         <style>
+            ul  {
+                list-style-type: none;
+                margin: 0px;
+                padding: 16px;
+                text-align: center;
+                overflow: hidden;
+                
+            }
+            li {
+                
+                
+                display: block;
+            
+            }
+            #background{ 
+                position: fixed; 
+                top: 0; 
+                left: 0; 
+                width: 100% !important; 
+                height: 100% !important; 
+                background: url(img/root.jpg) no-repeat center center fixed !important; 
+                -webkit-background-size: cover; 
+                -moz-background-size: cover; 
+                -o-background-size: cover; 
+                background-size: cover; 
+                z-index: -1; 
+                } 
+                .ui-page{ 
+                background:none; 
+            }
+
         </style>
+        
     </head>
     <body>
         <div data-role="page" id="login"> <!-- pagina de login -->
 			<div role="main" class="ui-content jqm-content jqm-fullwidth">
                 <div id="bg_login">
-                    <input type="button" width="80%" height="5%" value="Logearse">
+                    <input type="button" width="50%" height="5%" value="Entrar">
+                    <input type="button" width="50%" height="5%"><a href="#MainMenu">Sin Registro</a>
                 </div>
 			</div>
-        </div>
+        </div> <!-- end pagina login -->
+        
+        
+        <div data-role="page" data-theme="a" id="MainMenu">
+            <div role="main" class="ui-content" id="background">
+            
+                <div>
+                    <ul data-type="vertical">
+                        <li><input type="button" value="CURSOS" /></li>
+
+                        <li><input type="button" value="TRABAJO" /></li>
+
+                        <li><input type="button" value="MI CUENTA" /></li>
+
+                    </ul>
+            
+            
+                </div>
+            
+            </div> <!--end body -->
+        </div> <!--end page -->
+   
+    
+        
         
         <!--<script type="text/javascript" src="cordova.js"></script>-->
+        
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+        
         <script type="text/javascript" src="js/background-adaptable.js"></script>
     </body>
 </html>
