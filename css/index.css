@@ -19,39 +19,29 @@ ul  {
 li {
     display: block;
 }
-#background{ 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100% !important; 
-    height: 100% !important; 
-    background: url(../img/fondo_menu.png) no-repeat center center fixed !important; 
-    -webkit-background-size: cover; 
-    -moz-background-size: cover; 
-    -o-background-size: cover; 
-    background-size: cover; 
-    z-index: -1; 
-} 
 
-#background_menu{
+
+#bg_menu{
+    background: url(../img/fondo_main_menu.jpg)no-repeat;
+    background-size: cover;
     position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100% !important; 
-    height: 100% !important; 
-    background: url(../img/NODEFINITIVA_Foto_fondo.gif) no-repeat center center fixed !important; 
-    -webkit-background-size: cover; 
-    -moz-background-size: cover; 
-    -o-background-size: cover; 
-    background-size: cover; 
-    z-index: -1; 
+    top:0; 
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+#bg_calendar{
+    background: url(../img/fondo_calendar.png)no-repeat;
+    background-size: cover;
+    position: fixed; 
+    top:0; 
+    left:0;
+    width: 100%;
+    
     
 }
 
-
-.ui-page{ 
-    background:none; 
-}
 
 .btn_reg{ 
     background-color: #FF8300 !important; 
