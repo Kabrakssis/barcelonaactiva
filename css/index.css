@@ -32,6 +32,23 @@ li {
     background-size: cover; 
     z-index: -1; 
 } 
+
+#background_menu{
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100% !important; 
+    height: 100% !important; 
+    background: url(../img/NODEFINITIVA_Foto_fondo.gif) no-repeat center center fixed !important; 
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover; 
+    z-index: -1; 
+    
+}
+
+
 .ui-page{ 
     background:none; 
 }
@@ -44,7 +61,7 @@ li {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 24px;
+    font-size: 36px;
     margin: 4px 2px;
     cursor: pointer;
     width: 75%;

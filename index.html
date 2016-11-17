@@ -60,7 +60,7 @@
 
         <div data-role="page" data-theme="a" id="MainMenu"> <!-- Pagina Menu -->
 
-            <div role="main" class="ui-content" id="background">
+            <div role="main" class="ui-content" id="background_menu">
                 <div>
                     <ul data-type="vertical">
                         <li><input type="button" value="CURSOS" /></li>
@@ -74,7 +74,13 @@
         </div> <!--end page -->
 
         
+        
+        
         <div data-role="page" data-theme="a" id="registrarse">
+            <div data-role="header" style="overflow:hidden;">
+                <h1></h1>
+            <a href="#" data-icon="gear" class="ui-btn-right">CAS/ENG/CAT</a>
+
             <h1> DATOS BASICOS </h1>
                 <label for="textinput-hide" class="ui-hidden-accessible">Nombre</label>
                 <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Nombre" value="">
@@ -149,6 +155,11 @@
                 <form>
                 <a href="#" class="btn_reg ui-btn ui-corner-all">Registrarme</a>
                 </form>
+                
+                <div data-role="footer" style="overflow:hidden;">
+                <h4 style="text-align:center;">Footer</h4>
+                </div>
+                
         </div>
         
     
