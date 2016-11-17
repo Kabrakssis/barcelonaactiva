@@ -40,60 +40,27 @@
         
         <link rel="stylesheet" type="text/css" href="css/index.css"/>
         
-        <style>
-            ul  {
-                list-style-type: none;
-                margin: 0px;
-                padding: 16px;
-                text-align: center;
-                overflow: hidden;
-                
-            }
-            li {
-                
-                
-                display: block;
-            
-            }
-            #background{ 
-                position: fixed; 
-                top: 0; 
-                left: 0; 
-                width: 100% !important; 
-                height: 100% !important; 
-                background: url(img/root.jpg) no-repeat center center fixed !important; 
-                -webkit-background-size: cover; 
-                -moz-background-size: cover; 
-                -o-background-size: cover; 
-                background-size: cover; 
-                z-index: -1; 
-                } 
-                .ui-page{ 
-                background:none; 
-            }
-
-        </style>
         
+        <style>
+            
+        </style>
+ 
     </head>
     <body>
         <div data-role="page" id="login"> <!-- pagina de login -->
 			<div role="main" class="ui-content jqm-content jqm-fullwidth">
                 <div id="bg_login">
-                    <input type="button" width="50%" height="5%" value="Entrar">
-                    <input type="button" width="50%" height="5%"><a href="#MainMenu">Sin Registro</a>
+                    <a href="#" class="ui-btn" value="Entrar">Entrar</a>
+                    <a href="#MainMenu" class="ui-btn">Sin Registro</a>
+                    <a href="#registrarse" class="ui-btn">Registrarse</a>
                 </div>
 			</div>
         </div> <!-- end pagina login -->
         
-       
-    
-        
-        
-        
-        
-        <div data-role="page" data-theme="a" id="MainMenu">
+
+        <div data-role="page" data-theme="a" id="MainMenu"> <!-- Pagina Menu -->
+
             <div role="main" class="ui-content" id="background">
-            
                 <div>
                     <ul data-type="vertical">
                         <li><input type="button" value="CURSOS" /></li>
@@ -101,28 +68,95 @@
                         <li><input type="button" value="TRABAJO" /></li>
 
                         <li><input type="button" value="MI CUENTA" /></li>
-
                     </ul>
-            
-            
                 </div>
-            
             </div> <!--end body -->
         </div> <!--end page -->
+
         
-        
-        
-        
-        
-        
+        <div data-role="page" data-theme="a" id="registrarse">
+            <h1> DATOS BASICOS </h1>
+                <label for="textinput-hide" class="ui-hidden-accessible">Nombre</label>
+                <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Nombre" value="">
+
+                <label for="textinput-hide" class="ui-hidden-accessible">Primer Apellido</label>
+                <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Primer Apellido" value="">
+
+                <label for="textinput-hide" class="ui-hidden-accessible">Segundo Apellido</label>
+                <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Segundo Apellido" value="">
+   
+                <select name="select-native-1" id="select-native-1">
+                    <option value="1">*Tipo de Documento</option>
+                    <option value="1">DNI/NIE</option>
+                    <option value="2">NIF</option>
+
+                </select>
+            
+                <label for="textinput-hide" class="ui-hidden-accessible">Documento de Identidad</label>
+                <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Documento de Identidad" value="">
+                
+                    <p> * Eres </p>
+                        <a href="#" class="ui-btn ui-btn-inline">Hombre</a>
+                        <button class="ui-btn ui-btn-inline">Mujer</button>
+                
+                <form>
+
+                     <label for="date-2">Fecha de Nacimiento</label>
+                     <input type="date" data-clear-btn="true" name="date-2" id="date-2" value="">
+                </form>
+            
+                
+
+                        <select name="select-native-1" id="select-native-1">
+                            <option value="1">*Nivel de Estudios</option>
+                            <option value="1">BACHILLERATO</option>
+                            <option value="2">BUP</option>
+                            <option value="2">...</option>
+                        </select>
+                
+                <label for="textinput-hide" class="ui-hidden-accessible">Situacion laboral</label>
+                <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Situación laboral" value="">
+            
+                <label for="textinput-hide" class="ui-hidden-accessible">Nacionalidad</label>
+                <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Nacionalidad" value="">
+            
+                <label for="textinput-hide" class="ui-hidden-accessible">País</label>
+                <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* País" value="">
+            <h2> DATOS DE CONTACTO </h2>
+            
+                <form>
+                    <label for="textinput-hide" class="ui-hidden-accessible">Mail</label>
+                    <input type="text" data-clear-btn="true" name="textinput-hide" id="textinput-hide" placeholder="* mail@ejemplo.com" value="">
+                </form>
+                <form>
+                    <label for="textinput-hide" class="ui-hidden-accessible">Numero de telefono</label>
+                    <input type="text" data-clear-btn="true" name="textinput-hide" id="textinput-hide" placeholder="* Telefono" value="">
+                </form>
+            <h3> DATOS DE ACCESO Y NOTA LEGAL </h3>
+                
+                     
+                <label for="textinput-hide" class="ui-hidden-accessible">Password</label>
+                <input type="text" data-clear-btn="true" name="textinput-hide" id="textinput-hide" placeholder="* Clave de Accesso" value="">
+                
+            
+                <label for="textinput-hide" class="ui-hidden-accessible">Confirmar password</label>
+                <input type="text" data-clear-btn="true" name="textinput-hide" id="textinput-hide" placeholder="* Confirmar Clave de Accesso" value="">
+            
+                <label>
+                    <input type="checkbox" name="checkbox-0 ">Doy mi consentimiento a la nota legal
+                </label>
+            
+                <form>
+                <a href="#" class="btn_reg ui-btn ui-corner-all">Registrarme</a>
+                </form>
+        </div>
         
     
         
+
         
         <!--<script type="text/javascript" src="cordova.js"></script>-->
-        
         <script type="text/javascript" src="js/index.js"></script>
-        
         <script type="text/javascript" src="js/background-adaptable.js"></script>
     </body>
 </html>
