@@ -9,6 +9,14 @@
 #bg_login.bgwidth{ width: 100%; }
 #bg_login.bgheight{ height: 100%; }
 
+.btn_login{
+    background: orange;
+    margin: 1%;
+    padding: 2%;
+    border: 2px solid black;
+    border-radius: 15%;
+    border-width: 100%;
+}
 ul  {
     list-style-type: none;
     margin: 0px;
