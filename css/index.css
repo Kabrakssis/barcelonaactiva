@@ -43,15 +43,16 @@
 .btn_reg{ 
     background-color: #FF8300 !important; 
     border: none;
-    color: white;
+    color: white !important;
     padding: 15px 50px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 36px;
+    font-size: 100% !important;
     margin: 4px 2px;
     cursor: pointer;
     width: 75%;
+    text-shadow: 2px 2px black !important;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 .btn_reg:hover{
