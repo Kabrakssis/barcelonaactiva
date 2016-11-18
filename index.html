@@ -35,10 +35,21 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         
         <link rel="stylesheet" type="text/css" href="js/jquerymobile/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="css/clndr.css">
         <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
         <script type="text/javascript" src="js/jquerymobile/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/Underscore.js"></script>
+        <script type="text/javascript" src="js/moment.js"></script>
+        <script type="text/javascript" src="js/clndr.min.js"></script>
+        
+        
+        <script type="text/javascript" src="calendar.js"></script>
+        
+        
         
         <link rel="stylesheet" type="text/css" href="css/index.css"/>
+        
+        
         
         
         <style>
@@ -60,6 +71,7 @@
 
         <div data-role="page" data-theme="a" id="MainMenu"> <!-- Pagina Menu -->
             <div data-role="header" id="bg_menu">
+                <a href="#login" data-role="button" data-theme="a">Login</a>
                 
             </div>
             <div data-role="main" class="ui-content">
@@ -68,6 +80,7 @@
                 
             </div>
             <div data-role="footer" data-position="fixed" class="ui-content jqm-content jqm-fullwidth">
+                
                 <a href="#calendar" class="ui-btn">CURSOS</a>
                 <a href="#" class="ui-btn">TRABAJO</a>
                 <a href="#Ajustes" class="ui-btn">MI CUENTA</a>
@@ -162,32 +175,84 @@
                 </div>
             </div>
             <div data-role="main" class="ui-content">
+                <div class="container">
+                    <div id="custom-classes" class="cal1"></div>
                 
-                
-                
-                <div class="clndr-controls">
-                    <div class="clndr-previous-button">&lsaquo;</div>
-                    <div class="month"><%= month %></div>
-                    <div class="clndr-next-button">&rsaquo;</div>
+             <script type="text/template" id="clndr-template">
+        <div class="clndr-controls">
+            <div class="clndr-previous-button">&lsaquo;</div>
+            <div class="month"><%= month %></div>
+            <div class="clndr-next-button">&rsaquo;</div>
+        </div>
+        <div class="clndr-grid">
+            <div class="days-of-the-week">
+            <% _.each(daysOfTheWeek, function (day) { %>
+                <div class="header-day"><%= day %></div>
+            <% }); %>
+                <div class="days">
+                <% _.each(days, function (day) { %>
+                    <div class="<%= day.classes %>"><%= day.day %></div>
+                <% }); %>
                 </div>
-                <div class="clndr-grid">
-                    <div class="days-of-the-week">
-                    <% _.each(daysOfTheWeek, function (day) { %>
-                        <div class="header-day"><%= day %></div>
-                    <% }); %>
-                        <div class="days">
-                        <% _.each(days, function (day) { %>
-                            <div class="<%= day.classes %>"><%= day.day %></div>
-                        <% }); %>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <div class="clndr-today-button">Today</div>
+    </script>
+
+    <script type="text/template" id="clndr-multimonth-template">
+        <div class="multi-month-controls">
+            <div class="clndr-previous-year-button quarter-button">&laquo;</div><!--
+            --><div class="clndr-previous-button quarter-button">&lsaquo;</div><!--
+            --><div class="clndr-next-button quarter-button right-align">&rsaquo;</div><!--
+            --><div class="clndr-next-year-button quarter-button right-align">&raquo;</div>
+        </div>
+        <% _.each(months, function (oneMonth) { %>
+        <div class="clndr-controls">
+            <div class="month"><%= oneMonth.month.format('MMMM YYYY') %></div>
+        </div>
+        <div class="clndr-grid">
+            <div class="days-of-the-week">
+            <% _.each(daysOfTheWeek, function (day) { %>
+                <div class="header-day"><%= day %></div>
+            <% }); %>
+                <div class="days">
+                <% _.each(oneMonth.days, function (day) { %>
+                    <div class="<%= day.classes %>"><%= day.day %></div>
+                <% }); %>
                 </div>
+            </div>
+        </div>
+        <div class="clndr-today-button">Today</div>
+        <% }); %>
+    </script>
+
+    <script type="text/template" id="clndr-oneweek-template">
+        <div class="clndr-controls">
+            <div class="clndr-previous-button">&lsaquo;</div>
+            <div class="month">
+                <%= intervalStart.format('MM/DD') %> - <%= intervalEnd.format('MM/DD') %>
+            </div>
+            <div class="clndr-next-button">&rsaquo;</div>
+        </div>
+        <div class="clndr-grid">
+            <div class="days-of-the-week">
+            <% _.each(daysOfTheWeek, function (day) { %>
+                <div class="header-day"><%= day %></div>
+            <% }); %>
+                <div class="days">
+                <% _.each(days, function (day) { %>
+                    <div class="<%= day.classes %>"><%= day.day %></div>
+                <% }); %>
+                </div>
+            </div>
+        </div>
+    </script>   
       
                 
+                </div>
+            
+            
             </div>
-            
-            
-  
             
         </div> <!-- end page-->
 
@@ -195,7 +260,6 @@
         <!--<script type="text/javascript" src="cordova.js"></script>-->
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/background-adaptable.js"></script>
-        <script type="text/javascript" src="js/clndr.js"></script>
-        <script type="text/javascript" src="js/clndr.min.js"></script>
+        
     </body>
 </html>
