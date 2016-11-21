@@ -5,6 +5,7 @@
     top:0; 
     left:0;
     width: 100%;
+    height: 100%;
 }
 #bg_login.bgwidth{ width: 100%; }
 #bg_login.bgheight{ height: 100%; }
@@ -33,7 +34,6 @@
     transform: translateY(4px);  
 }
 
-
 #bg_menu{
     background: url(../img/fondo_main_menu.jpg)no-repeat;
     background-size: cover;
@@ -45,16 +45,13 @@
 }
 
 #bg_calendar{
-    background: url(../img/fondo_calendar.png)no-repeat;
+    background: url(../img/)no-repeat;
     background-size: cover;
     position: fixed; 
     top:0; 
     left:0;
     width: 100%;
-    
-    
 }
-
 
 .btn_reg{ 
     background-color: #FF8300 !important; 
