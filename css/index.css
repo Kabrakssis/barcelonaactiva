@@ -10,13 +10,29 @@
 #bg_login.bgheight{ height: 100%; }
 
 .btn_login{
-    background: orange;
-    margin: 1%;
-    padding: 2%;
-    border: 2px solid black;
-    border-radius: 15%;
-    border-width: 100%;
+    background-color: #FF8300 !important; 
+    border: none;
+    color: white !important;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100% !important;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 75%;
+    text-shadow: 2px 2px black !important;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+.btn_login:hover{
+    background-color: #FF8300
+}
+.btn_login:active{
+    background-color: #FF8300;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);  
+}
+
 
 #bg_menu{
     background: url(../img/fondo_main_menu.jpg)no-repeat;
@@ -61,8 +77,6 @@
 .btn_reg:active{
     background-color: #FF8300;
     box-shadow: 0 5px #666;
-    transform: translateY(4px);
-    
-    
+    transform: translateY(4px);  
 }
 
