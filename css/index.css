@@ -52,7 +52,29 @@
     left:0;
     width: 100%;
 }
-
+#bg_reg_head {
+    background: url(../img/fondo_calendar.png)no-repeat;
+    
+    
+    
+}
+h1 {
+    
+    font-size: 100%;
+    border: none;
+    
+}
+IMG {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+option {
+    font-size: 25%;
+    border: none;
+    
+    
+}
 .btn_reg{ 
     background-color: #FF8300 !important; 
     border: none;
