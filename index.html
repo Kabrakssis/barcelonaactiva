@@ -64,11 +64,11 @@
         <div data-role="page" id="login"> <!-- pagina de login -->
 			<div role="main" class="ui-content jqm-content jqm-fullwidth">
                 <div id="bg_login">
-                    <center><IMG class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:75px;height:75px;"></center>
+                    <img class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:75px;height:75px;position:center">
                     <br>
                     <br>
-                    Nombre Usuario:<input type="text" id="Nombre">
-                    Contraseña:<input type="password" id="Password"><br>
+                        <label>Nombre Usuario:</label><input type="text" id="Nombre"/>
+                        <label>Contraseña:</label><input type="password" id="Password"/><br>
                     <a href="#" class="btn_login" id="btn_entrar">Entrar</a><br>
                     <a href="#MainMenu" class="btn_login" >Sin Registro</a><br><br><br>
                     <a href="#registrarse" class="btn_login">Registrarse</a>
@@ -92,19 +92,13 @@
                 <div data-type="horizontal" style="text-align: center">
                     
                         <a href="#calendar" class="ui-btn-inline" ><img src="img/boton_cursos.png"  style="width:75px;height:75px;padding: 2px"><label style="color: #EA7412;"> CURSOS </label>
-                        
                         </a>
                         
                         <a href="#trabajo" class="ui-btn-inline"><img src="img/boton_trabajo1.png" style="width:75px;height:75px; padding: 2px"><label style="color: #EA7412;"> TRABAJO </label>
-
                         </a>
                         
                         <a href="#cuenta" class="ui-btn-inline"><img src="img/boton_usuario1.png" style="width:75px;height:75px; padding: 2px"><label style="color: #EA7412;"> CUENTA </label>   
                         </a>
-                        
-                
-            
-            
                 </div>
         </div> <!--end body -->
     </div> <!--end page -->
@@ -113,85 +107,79 @@
         
         
         <div data-role="page" data-theme="a" id="registrarse"><!-- Pagina Registrarse -->
-            
-            <div data-role="header" style="display" id="bg_reg_head"><IMG class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:75px;height:75px;">
+            <div data-role="header" style="display" id="bg_reg_head"><img class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:75px;height:75px;"/>
                 <a href="#login" data-role="button" data-theme="a" class="ui-btn ui-btn-inline-left">Atras</a>
                 <a href="#" data-icon="gear" class="ui-btn-right">CAS</a>
-                
-                
             </div>
-                
+            
             <h1> DATOS BASICOS </h1>
-                <label for="textinput-hide" class="ui-hidden-accessible">Nombre</label>
-                <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Nombre" value="">
+            <label for="textinput-hide" class="ui-hidden-accessible">Nombre</label>
+            <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Nombre" value=""/>
 
-                <label for="textinput-hide" class="ui-hidden-accessible">Primer Apellido</label>
-                <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Primer Apellido" value="">
+            <label for="textinput-hide" class="ui-hidden-accessible">Primer Apellido</label>
+            <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Primer Apellido" value=""/>
 
-                <label for="textinput-hide" class="ui-hidden-accessible">Segundo Apellido</label>
-                <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Segundo Apellido" value="">
-   
-                <select name="select-native-1" id="select-native-1">
-                    <option value="1">*Tipo de Documento</option>
-                    <option value="1">DNI/NIE</option>
-                    <option value="2">NIF</option>
-
-                </select>
+            <label for="textinput-hide" class="ui-hidden-accessible">Segundo Apellido</label>
+            <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Segundo Apellido" value=""/>
             
-                <label for="textinput-hide" class="ui-hidden-accessible">Documento de Identidad</label>
-                <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Documento de Identidad" value="">
-                
+            <select name="select-native-1" id="select-native-1">
+                <option value="1">*Tipo de Documento</option>
+                <option value="1">DNI/NIE</option>
+                <option value="2">NIF</option>
+            </select>
+            
+            <label for="textinput-hide" class="ui-hidden-accessible">Documento de Identidad</label>
+            <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Documento de Identidad" value=""/>
+            
+            <label>
                 <p1> * Eres </p1>
-                <label>
-                    <a href="#Hombre" class="ui-btn ui-btn-inline">Hombre</a>
-                    <a href="#Mujer" class="ui-btn ui-btn-inline">Mujer</button>
-                </label>
-                
-                <label for="date-2">Fecha de Nacimiento</label>
-                <input type="date" data-clear-btn="true" name="date-2" id="date-2" value="">
-                
-                <select name="seleccionar estudios" id="select-estudios">
-                    <option value="1">*Nivel de Estudios</option>
-                    <option value="1">BACHILLERATO</option>
-                    <option value="2">BUP</option>
-                    <option value="2">...</option>
-                </select>
-                
-                <label for="textinput-hide" class="ui-hidden-accessible">Situacion laboral</label>
-                <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Situación laboral" value="">
+                <a href="#Hombre" class="ui-btn ui-btn-inline">Hombre</a>
+                <a href="#Mujer" class="ui-btn ui-btn-inline">Mujer</a>
+            </label>
             
-                <label for="textinput-hide" class="ui-hidden-accessible">Nacionalidad</label>
-                <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Nacionalidad" value="">
+            <label for="date-2">Fecha de Nacimiento</label>
+            <input type="date" data-clear-btn="true" name="date-2" id="date-2" value=""/>
             
-                <label for="textinput-hide" class="ui-hidden-accessible">País</label>
-                <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* País" value="">
+            <select name="seleccionar estudios" id="select-estudios">
+                <option value="1">*Nivel de Estudios</option>
+                <option value="1">BACHILLERATO</option>
+                <option value="2">BUP</option>
+                <option value="2">...</option>
+            </select>
+            
+            <label for="textinput-hide" class="ui-hidden-accessible">Situacion laboral</label>
+            <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Situación laboral" value=""/>
+            
+            <label for="textinput-hide" class="ui-hidden-accessible">Nacionalidad</label>
+            <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* Nacionalidad" value=""/>
+            
+            <label for="textinput-hide" class="ui-hidden-accessible">País</label>
+            <input type="text" name="textinput-hide" id="textinput-hide" placeholder="* País" value=""/>
             <h1> DATOS DE CONTACTO </h1>
             
-                <form>
-                    <label for="textinput-hide" class="ui-hidden-accessible">Mail</label>
-                    <input type="text" data-clear-btn="true" name="textinput-hide" id="textinput-hide" placeholder="* mail@ejemplo.com" value="">
-                </form>
-                <form>
-                    <label for="textinput-hide" class="ui-hidden-accessible">Numero de telefono</label>
-                    <input type="text" data-clear-btn="true" name="textinput-hide" id="textinput-hide" placeholder="* Telefono" value="">
-                </form>
-            <h1> DATOS DE ACCESO Y NOTA LEGAL </h1>       
-                <label for="textinput-hide" class="ui-hidden-accessible">Password</label>
-                <input type="text" data-clear-btn="true" name="textinput-hide" id="textinput-hide" placeholder="* Clave de Accesso" value="">
-                <label for="textinput-hide" class="ui-hidden-accessible">Confirmar password</label>
-                <input type="text" data-clear-btn="true" name="textinput-hide" id="textinput-hide" placeholder="* Confirmar Clave de Accesso" value="">
+            <form>
+                <label for="textinput-hide" class="ui-hidden-accessible">Mail</label>
+                <input type="text" data-clear-btn="true" name="textinput-hide" id="textinput-hide" placeholder="* mail@ejemplo.com" value=""/>
+            </form>
+            <form>
+                <label for="textinput-hide" class="ui-hidden-accessible">Numero de telefono</label>
+                <input type="text" data-clear-btn="true" name="textinput-hide" id="textinput-hide" placeholder="* Telefono" value=""/>
+            </form>
             
-                <label>
-                    <input type="checkbox" name="checkbox-0 ">Doy mi consentimiento a la nota legal
-                </label>
-                <form>
-                <a href="#" class="btn_reg ui-btn ui-corner-all">Registrarme</a>
-                </form>
-                
-                
-            </div>
+            <h1> DATOS DE ACCESO Y NOTA LEGAL </h1> 
+            
+            <label for="textinput-hide" class="ui-hidden-accessible">Password</label>
+            <input type="text" data-clear-btn="true" name="textinput-hide" id="textinput-hide" placeholder="* Clave de Accesso" value=""/>
+            
+            <label for="textinput-hide" class="ui-hidden-accessible">Confirmar password</label>
+            <input type="text" data-clear-btn="true" name="textinput-hide" id="textinput-hide1" placeholder="* Confirmar Clave de Accesso" value=""/>
+            
+            <label>
+                <input type="checkbox" name="checkbox-0 "/>Doy mi consentimiento a la nota legal
+            </label>
+            
+            <a href="#" class="btn_reg ui-btn ui-corner-all">Registrarme</a>
         </div><!-- Pagina Registrarse -->
-            
             
         <div data-role="page" data-theme="a" id="calendar"> <!-- pagina Calendario -->
             
@@ -280,7 +268,7 @@
         </div> <!-- end page-->
         
         <div data-role="page" data-theme="a" id="capsulas"> <!-- pagina Cursos, capsulas -->
-            <div data-role="header" style="display" id="bg_reg_head"><IMG class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:75px;height:75px;">
+            <div data-role="header" style="display" id="bg_reg_head"><img class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:75px;height:75px;">
                 <a href="#calendar" data-role="button" data-theme="a" class="ui-btn ui-btn-inline-left">Atras</a>
             </div>
             
