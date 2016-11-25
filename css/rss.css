@@ -1,0 +1,33 @@
+#rss{
+   background-image:url(images/rss.jpg);
+   font-size:10px;
+   font-family:Verdana, Arial, Helvetica, sans-serif;
+   width:243px;
+   height:255px;
+   padding-left:15px;
+   padding-top:40px;
+   padding-right:10px;
+   float:left;
+   }
+titulo{
+   font-weight:bold;
+   color:#FF0000;
+   }
+descripcion{
+   color:#000000;
+   }
+fecha{
+   color:#999999;
+   }
+enlace a{
+   color:#003399;
+   margin-left:180px;
+   }
+next a{
+   color:#006699;
+   margin-left:180px;
+   text-decoration:none;
+   }
+load{
+   color:#003366;
+   }

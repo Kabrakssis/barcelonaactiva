@@ -28,7 +28,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' yourhost.com ws://localhost:35729 data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *;script-src 'self' localhost:35729 'unsafe-eval' 'unsafe-inline';">
+       <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' yourhost.com ws://localhost:35729 data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *;script-src 'self' localhost:35729 'unsafe-eval' 'unsafe-inline';">-->
         
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
@@ -36,30 +36,18 @@
         
         <link rel="stylesheet" type="text/css" href="js/jquerymobile/jquery.mobile-1.4.5.min.css" />
         <link rel="stylesheet" href="css/clndr.css">
+        <link rel="stylesheet" href="css/rss.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
+        
         <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
         <script type="text/javascript" src="js/jquerymobile/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="js/Underscore.js"></script>
         <script type="text/javascript" src="js/moment.js"></script>
         <script type="text/javascript" src="js/clndr.min.js"></script>
-        
-        
         <script type="text/javascript" src="js/calendar.js"></script>
         
-        
-        
-        <link rel="stylesheet" type="text/css" href="css/index.css"/>
-        
-        
-        
-       
-        
-        
-      
     </head>
     <body>
-        
-        
-        
         
         <div data-role="page" id="login"> <!-- pagina de login -->
 			<div role="main" class="ui-content jqm-content jqm-fullwidth">
@@ -89,16 +77,16 @@
             </div>
                 
             <div data-role="footer" data-position="fixed" class="ui-content">
-                <div data-type="horizontal" style="text-align: center">
+                <div data-type="horizontal" align="center" class="ui-grid-b">
                     
-                        <a href="#calendar" class="ui-btn-inline" ><img src="img/boton_cursos.png"  style="width:75px;height:75px;padding: 2px"><label style="color: #EA7412;"> CURSOS </label>
-                        </a>
+                        <div class="ui-block-a"><a href="#calendar" class="ui-btn-inline" ><img src="img/boton_cursos.png"  style="width:75px;height:75px;padding: 2px"><label style="color: #EA7412;"> CURSOS </label>
+                        </a></div>
                         
-                        <a href="#trabajo" class="ui-btn-inline"><img src="img/boton_trabajo1.png" style="width:75px;height:75px; padding: 2px"><label style="color: #EA7412;"> TRABAJO </label>
-                        </a>
+                        <div class="ui-block-b"><a href="#trabajo" class="ui-btn-inline"><img src="img/boton_trabajo1.png" style="width:75px;height:75px; padding: 2px"><label style="color: #EA7412;"> TRABAJO </label>
+                        </a></div>
                         
-                        <a href="#cuenta" class="ui-btn-inline"><img src="img/boton_usuario1.png" style="width:75px;height:75px; padding: 2px"><label style="color: #EA7412;"> CUENTA </label>   
-                        </a>
+                        <div class="ui-block-c"><a href="#cuenta" class="ui-btn-inline"><img src="img/boton_usuario1.png" style="width:75px;height:75px; padding: 2px"><label style="color: #EA7412;"> CUENTA </label>   
+                        </a></div>
                 </div>
         </div> <!--end body -->
     </div> <!--end page -->
@@ -186,7 +174,7 @@
             <div data-role="header" id="bg_calendar">
                 <div data-role="header">
                 <a href="#MainMenu" data-role="button" data-theme="a">Atras</a>    
-                <a href="#capsulas" class="ui-btn-right" onclick="showRSS()">Next</a>
+                <a href="#capsulas" class="ui-btn-right" id="btn-next" onclick="llamadapag();">Next</a>
                 </div>
             </div>
             <div data-role="main" class="ui-content">
@@ -262,10 +250,8 @@
         </div>
     </script>
                 </div>
-                
-            </div>
-            
-        </div> <!-- end page-->
+            </div>  
+        </div> <!-- end calendario page-->
         
         <div data-role="page" data-theme="a" id="capsulas"> <!-- pagina Cursos, capsulas -->
             <div data-role="header" style="display" id="bg_reg_head"><img class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:75px;height:75px;">
@@ -274,23 +260,18 @@
             
             <div data-role="main" class="ui-content" id="cap_content">
                 
-                
+                <p>Cargando...</p>
                 
                 
             </div>
-            
-            
-            
-            
-            
-            
-            
         </div> <!-- end page-->
         
         
-        <!--<script type="text/javascript" src="cordova.js"></script> -->
+        <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/background-adaptable.js"></script>
+        <script type="text/javascript" src="js/rss.js"></script>
+        
         
     </body>
 </html>
