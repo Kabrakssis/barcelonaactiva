@@ -10,9 +10,15 @@
 #bg_login.bgwidth{ width: 100%; }
 #bg_login.bgheight{ height: 100%; }
 
+.txtbx_login{
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
 .btn_login{
     background-color: #FF8300 !important; 
     border: none;
+    border-radius: 15px;
     color: white !important;
     padding: 15px 50px;
     text-align: center;
@@ -21,7 +27,7 @@
     font-size: 100% !important;
     margin: 4px 2px;
     cursor: pointer;
-    width: 75%;
+    width: 60%;
     text-shadow: 2px 2px black !important;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
@@ -64,16 +70,10 @@ h1 {
     border: none;
     
 }
-IMG {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 option {
     font-size: 25%;
     border: none;
-    
-    
 }
 .btn_reg{ 
     background-color: #FF8300 !important; 
@@ -102,10 +102,7 @@ option {
 
 .btn_login_css {
     background-color: #959595;
-    
-    
 }
 a {
-    
     text-decoration: none;
 }
