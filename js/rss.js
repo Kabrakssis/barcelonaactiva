@@ -2,15 +2,19 @@ var i=1;
 
 //var paginabcn= "http://www.barcelonactiva.cat/barcelonactiva/es/activitatsRSS.do?portal=1&idioma=2&codiLinia=5&data=&mesN=7&disponibilitat=1";
 
+document.getElementById("btn-next").addEventListener("click",llamadapag);
+
 
 function llamadapag(){
+    alert("asda");
     $.ajax({
-        url : "http://www.barcelonactiva.cat/barcelonactiva/es/activitatsRSS.do?portal=1&idioma=2&codiLinia=5&data=&mesN=7&disponibilitat=1",
-        success : function(result){
-            alert(result);
-        }
+        
+        url:"http://www.barcelonactiva.cat/barcelonactiva/es/activitatsRSS.do?portal=1&idioma=2&codiLinia=5&data=&mesN=7&disponibilitat=1",
+        success : function(result){alert(result);}
     });
+    
 }
+
 
 /*document.getElementById("btn-next").onclick=function(){
     llamadacursos();
@@ -28,7 +32,7 @@ function cursosdia(url, id_contenedor, N){
     }
 }*/
 
-function cargarpagina(pagina_requerida, id_contenedor,N){
+/*function cargarpagina(pagina_requerida, id_contenedor,N){
 	if (pagina_requerida.readyState == 4 && (pagina_requerida.status==200 || window.location.href.indexOf("http")==-1)){
 		//usamos la propiedad responseXML: devuelve datos por el servidor en forma de documento XML
 		var xml = pagina_requerida.responseXML;
@@ -60,4 +64,4 @@ function cargarpagina(pagina_requerida, id_contenedor,N){
 	//un pequeño mensaje para avisar que se está cargando la info
 	}else if (pagina_requerida.readyState == 1)
 		document.getElementById(id_contenedor).innerHTML="<load>Cargando...</load>"
-}
+}*/

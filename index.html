@@ -28,15 +28,17 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-       <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' yourhost.com ws://localhost:35729 data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *;script-src 'self' localhost:35729 'unsafe-eval' 'unsafe-inline';">-->
+       <meta http-equiv="Content-Security-Policy" content="default-src 'self' www.barcelonactiva.cat ws://localhost:35729 data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *;script-src 'self' localhost:35729 'unsafe-eval' 'unsafe-inline';">
+        
+        
         
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         
         <link rel="stylesheet" type="text/css" href="js/jquerymobile/jquery.mobile-1.4.5.min.css" />
-        <link rel="stylesheet" href="css/clndr.css">
-        <link rel="stylesheet" href="css/rss.css">
+        <link rel="stylesheet" type="text/css" href="css/clndr.css">
+        <link rel="stylesheet" type="text/css" href="css/rss.css">
         <link rel="stylesheet" type="text/css" href="css/index.css"/>
         
         <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
@@ -52,14 +54,17 @@
         <div data-role="page" id="login"> <!-- pagina de login -->
 			<div role="main" class="ui-content jqm-content jqm-fullwidth">
                 <div id="bg_login">
-                    <img class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:75px;height:75px;position:center">
+                    <center><img class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:75px;height:75px;position:center"></center>
                     <br>
                     <br>
+                    <div class="txtbx_login">
                         <label>Nombre Usuario:</label><input type="text" id="Nombre"/>
-                        <label>Contraseña:</label><input type="password" id="Password"/><br>
-                    <a href="#" class="btn_login" id="btn_entrar">Entrar</a><br>
-                    <a href="#MainMenu" class="btn_login" >Sin Registro</a><br><br><br>
-                    <a href="#registrarse" class="btn_login">Registrarse</a>
+                        <label>Contraseña:</label><input type="password" id="Password"/>
+                    </div>
+                   <br>
+                    <center><a href="#" class="btn_login" id="btn_entrar">Entrar</a></center><br><br><br>
+                    <center><a href="#MainMenu" class="btn_login" >Consultar Catalogo</a></center><br>
+                    <center><a href="#registrarse" class="btn_login">Registrarse</a></center>
                 </div>
 			</div>
         </div> <!-- end pagina login -->
@@ -174,7 +179,7 @@
             <div data-role="header" id="bg_calendar">
                 <div data-role="header">
                 <a href="#MainMenu" data-role="button" data-theme="a">Atras</a>    
-                <a href="#capsulas" class="ui-btn-right" id="btn-next" onclick="llamadapag();">Next</a>
+                <a href="#capsulas" class="ui-btn-right" id="btn-next">Next</a>
                 </div>
             </div>
             <div data-role="main" class="ui-content">
