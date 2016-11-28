@@ -70,38 +70,111 @@
                         <label>Nombre Usuario:</label><input type="text" id="Nombre"/>
                         <label>Contraseña:</label><input type="password" id="Password"/><br>
                     <a href="#" class="btn_login" id="btn_entrar">Entrar</a><br>
-                    <a href="#MainMenu" class="btn_login" >Sin Registro</a><br><br><br>
+                    <a href="#MainMenu" class="btn_login" >Consultar Catalogo</a><br><br><br>
                     <a href="#registrarse" class="btn_login">Registrarse</a>
                 </div>
 			</div>
         </div> <!-- end pagina login -->
         
 
-        <div data-role="page" data-theme="a" id="MainMenu"> <!-- Pagina Menu -->
-            <div data-role="header" id="bg_menu">
-                <a href="#login" data-role="button" data-theme="a">Login</a>
-                
-            </div>
-            <div data-role="main" class="ui-content">
-                <p> Main Area</p>
-               
-                
-            </div>
-                
-            <div data-role="footer" data-position="fixed" class="ui-content">
-                <div data-type="horizontal" style="text-align: center">
+        <div data-role="page" class="jqm-demos" data-url="panel-fixed-page1" id="MainMenu"> <!-- Pagina Menu -->
+            <div data-role="header" data-position="fixed">
+                <a href="#filter-menu" data-icon="bars">Menu</a>
+                <a href="#filter-calendar" data-icon="search">Filter</a>
+
                     
-                        <a href="#calendar" class="ui-btn-inline" ><img src="img/boton_cursos.png"  style="width:75px;height:75px;padding: 2px"><label style="color: #EA7412;"> CURSOS </label>
-                        </a>
-                        
-                        <a href="#trabajo" class="ui-btn-inline"><img src="img/boton_trabajo1.png" style="width:75px;height:75px; padding: 2px"><label style="color: #EA7412;"> TRABAJO </label>
-                        </a>
-                        
-                        <a href="#cuenta" class="ui-btn-inline"><img src="img/boton_usuario1.png" style="width:75px;height:75px; padding: 2px"><label style="color: #EA7412;"> CUENTA </label>   
-                        </a>
+                    
+                    
+            </div>
+            
+        
+                    
+                
+            
+            
+
+            <div data-role="main" class="ui-content">
+                <div class="container">
+                    <div id="custom-classes" class="cal1"></div> 
+             <script type="text/template" id="clndr-template">
+                <div class="clndr-controls">
+                    <div class="clndr-previous-button">&lsaquo;</div>
+                    <div class="month"><%= month %></div>
+                    <div class="clndr-next-button">&rsaquo;</div>
                 </div>
-        </div> <!--end body -->
-    </div> <!--end page -->
+                <div class="clndr-grid">
+                    <div class="days-of-the-week">
+                    <% _.each(daysOfTheWeek, function (day) { %>
+                        <div class="header-day"><%= day %></div>
+                    <% }); %>
+                        <div class="days">
+                        <% _.each(days, function (day) { %>
+                            <div class="<%= day.classes %>"><%= day.day %></div>
+                        <% }); %>
+                        </div>
+                    </div>
+                </div>
+                <div class="clndr-today-button">Today</div>
+            </script>
+
+            <script type="text/template" id="clndr-multimonth-template">
+                <div class="multi-month-controls">
+                    <div class="clndr-previous-year-button quarter-button">&laquo;</div><!--
+                    --><div class="clndr-previous-button quarter-button">&lsaquo;</div><!--
+                    --><div class="clndr-next-button quarter-button right-align">&rsaquo;</div><!--
+                    --><div class="clndr-next-year-button quarter-button right-align">&raquo;</div>
+                </div>
+                <% _.each(months, function (oneMonth) { %>
+                <div class="clndr-controls">
+                    <div class="month"><%= oneMonth.month.format('MMMM YYYY') %></div>
+                </div>
+                <div class="clndr-grid">
+                    <div class="days-of-the-week">
+                    <% _.each(daysOfTheWeek, function (day) { %>
+                        <div class="header-day"><%= day %></div>
+                    <% }); %>
+                        <div class="days">
+                        <% _.each(oneMonth.days, function (day) { %>
+                            <div class="<%= day.classes %>"><%= day.day %></div>
+                        <% }); %>
+                        </div>
+                    </div>
+                </div>
+                <div class="clndr-today-button">Today</div>
+                <% }); %>
+            </script>
+
+            <script type="text/template" id="clndr-oneweek-template">
+                <div class="clndr-controls">
+                    <div class="clndr-previous-button">&lsaquo;</div>
+                    <div class="month">
+                        <%= intervalStart.format('MM/DD') %> - <%= intervalEnd.format('MM/DD') %>
+                    </div>
+                    <div class="clndr-next-button">&rsaquo;</div>
+                </div>
+                <div class="clndr-grid">
+                    <div class="days-of-the-week">
+                    <% _.each(daysOfTheWeek, function (day) { %>
+                        <div class="header-day"><%= day %></div>
+                    <% }); %>
+                        <div class="days">
+                        <% _.each(days, function (day) { %>
+                            <div class="<%= day.classes %>"><%= day.day %></div>
+                        <% }); %>
+                        </div>
+                    </div>
+                </div>
+            </script>
+                </div>
+                
+            </div>
+           
+        
+            </div><!--end header -->    
+           
+                
+            
+    
 
         
         
@@ -181,91 +254,7 @@
             <a href="#" class="btn_reg ui-btn ui-corner-all">Registrarme</a>
         </div><!-- Pagina Registrarse -->
             
-        <div data-role="page" data-theme="a" id="calendar"> <!-- pagina Calendario -->
-            
-            <div data-role="header" id="bg_calendar">
-                <div data-role="header">
-                <a href="#MainMenu" data-role="button" data-theme="a">Atras</a>    
-                <a href="#capsulas" class="ui-btn-right" onclick="showRSS()">Next</a>
-                </div>
-            </div>
-            <div data-role="main" class="ui-content">
-                <div class="container">
-                    <div id="custom-classes" class="cal1"></div> 
-             <script type="text/template" id="clndr-template">
-        <div class="clndr-controls">
-            <div class="clndr-previous-button">&lsaquo;</div>
-            <div class="month"><%= month %></div>
-            <div class="clndr-next-button">&rsaquo;</div>
-        </div>
-        <div class="clndr-grid">
-            <div class="days-of-the-week">
-            <% _.each(daysOfTheWeek, function (day) { %>
-                <div class="header-day"><%= day %></div>
-            <% }); %>
-                <div class="days">
-                <% _.each(days, function (day) { %>
-                    <div class="<%= day.classes %>"><%= day.day %></div>
-                <% }); %>
-                </div>
-            </div>
-        </div>
-        <div class="clndr-today-button">Today</div>
-    </script>
-
-    <script type="text/template" id="clndr-multimonth-template">
-        <div class="multi-month-controls">
-            <div class="clndr-previous-year-button quarter-button">&laquo;</div><!--
-            --><div class="clndr-previous-button quarter-button">&lsaquo;</div><!--
-            --><div class="clndr-next-button quarter-button right-align">&rsaquo;</div><!--
-            --><div class="clndr-next-year-button quarter-button right-align">&raquo;</div>
-        </div>
-        <% _.each(months, function (oneMonth) { %>
-        <div class="clndr-controls">
-            <div class="month"><%= oneMonth.month.format('MMMM YYYY') %></div>
-        </div>
-        <div class="clndr-grid">
-            <div class="days-of-the-week">
-            <% _.each(daysOfTheWeek, function (day) { %>
-                <div class="header-day"><%= day %></div>
-            <% }); %>
-                <div class="days">
-                <% _.each(oneMonth.days, function (day) { %>
-                    <div class="<%= day.classes %>"><%= day.day %></div>
-                <% }); %>
-                </div>
-            </div>
-        </div>
-        <div class="clndr-today-button">Today</div>
-        <% }); %>
-    </script>
-
-    <script type="text/template" id="clndr-oneweek-template">
-        <div class="clndr-controls">
-            <div class="clndr-previous-button">&lsaquo;</div>
-            <div class="month">
-                <%= intervalStart.format('MM/DD') %> - <%= intervalEnd.format('MM/DD') %>
-            </div>
-            <div class="clndr-next-button">&rsaquo;</div>
-        </div>
-        <div class="clndr-grid">
-            <div class="days-of-the-week">
-            <% _.each(daysOfTheWeek, function (day) { %>
-                <div class="header-day"><%= day %></div>
-            <% }); %>
-                <div class="days">
-                <% _.each(days, function (day) { %>
-                    <div class="<%= day.classes %>"><%= day.day %></div>
-                <% }); %>
-                </div>
-            </div>
-        </div>
-    </script>
-                </div>
-                
-            </div>
-            
-        </div> <!-- end page-->
+        
         
         <div data-role="page" data-theme="a" id="capsulas"> <!-- pagina Cursos, capsulas -->
             <div data-role="header" style="display" id="bg_reg_head"><img class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:75px;height:75px;">
