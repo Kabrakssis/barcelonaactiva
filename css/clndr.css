@@ -56,9 +56,9 @@ p {
 }
 .cal1 {
   margin: 30px auto;
-  max-width: 600px;
+  max-width: auto;
   font-family: 'Droid Sans Mono';
-  font-size: 14px;
+  font-size: 16px;
 }
 .cal1 .clndr .clndr-controls {
   display: inline-block;

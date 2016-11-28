@@ -35,26 +35,19 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         
         <link rel="stylesheet" type="text/css" href="js/jquerymobile/jquery.mobile-1.4.5.min.css" />
-        <link rel="stylesheet" href="css/clndr.css">
+        <link rel="stylesheet" type="text/css" href="css/clndr.css">
+        <link rel="stylesheet" type="text/css" href="css/rss.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
+        <link rel="stylesheet" type="text/css" href="css/icon-pack-custom.css"/>
+        
         <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
         <script type="text/javascript" src="js/jquerymobile/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="js/Underscore.js"></script>
         <script type="text/javascript" src="js/moment.js"></script>
         <script type="text/javascript" src="js/clndr.min.js"></script>
-        
-        
         <script type="text/javascript" src="js/calendar.js"></script>
         
-        
-        
-        <link rel="stylesheet" type="text/css" href="css/index.css"/>
-        
-        
-        
-       
-        
-        
-      
+  
     </head>
     <body>
         
@@ -64,33 +57,39 @@
         <div data-role="page" id="login"> <!-- pagina de login -->
 			<div role="main" class="ui-content jqm-content jqm-fullwidth">
                 <div id="bg_login">
-                    <img class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:75px;height:75px;position:center">
+                    <center><img class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:75px;height:75px;position:center"></center>
                     <br>
                     <br>
+                    <div class="txtbx_login">
                         <label>Nombre Usuario:</label><input type="text" id="Nombre"/>
-                        <label>Contraseña:</label><input type="password" id="Password"/><br>
-                    <a href="#" class="btn_login" id="btn_entrar">Entrar</a><br>
-                    <a href="#MainMenu" class="btn_login" >Consultar Catalogo</a><br><br><br>
-                    <a href="#registrarse" class="btn_login">Registrarse</a>
+                        <label>Contraseña:</label><input type="password" id="Password"/>
+                    </div>
+                   <br>
+                    <center><a href="#" class="btn_login" id="btn_entrar">Entrar</a></center><br><br><br>
+                    <center><a href="#MainMenu" class="btn_login" >Consultar Catalogo</a></center><br>
+                    <center><a href="#registrarse" class="btn_login">Registrarse</a></center>
                 </div>
 			</div>
         </div> <!-- end pagina login -->
         
 
         <div data-role="page" class="jqm-demos" data-url="panel-fixed-page1" id="MainMenu"> <!-- Pagina Menu -->
-            <div data-role="header" data-position="fixed">
-                <a href="#filter-menu" data-icon="bars">Menu</a>
-                <a href="#filter-calendar" data-icon="search">Filter</a>
-
-                    
-                    
-                    
+            
+            <div data-role="header" data-position="fixed" style='background:#F9F8F8;'>
+                <a href="#filter-menu" data-icon="bars" data-iconpos="notext">Menu</a>
+                <center><img class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:40px;height:40px;position:center"></center>
+                <a href="#filter-calendar" data-icon="filter" data-iconpos="notext">Filter</a>     
             </div>
             
-        
-                    
+            <div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="b" id="filter-menu">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menu</a></li>
+                    <li><a href="#MainMenu">CALENDAR</a></li>
+                    <li><a href="#trabajo">TRABAJO</a></li>
+                    <li><a href="#cuenta">MI CUENTA</a></li>
                 
-            
+                </ul>
+            </div>
             
 
             <div data-role="main" class="ui-content">
