@@ -61,7 +61,11 @@
 #bg_reg_head {
     background: url(../img/fondo_calendar.png)no-repeat;
     
+  
     
+}
+#filter_icon {
+    background: url(../img/filter.png)no-repeat;
     
 }
 h1 {

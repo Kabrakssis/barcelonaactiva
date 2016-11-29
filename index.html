@@ -91,37 +91,31 @@
                 </ul>
             </div>
             
+            <div data-role="panel" data-position="right" data-display="overlay" data-theme="b" id="filter-calendar">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menu</a></li>
+                    <li><a href="#MainMenu">CURSOS DE PORTA 22</a></li>
+                    <li><a href="#trabajo">CIBERNARIUM - MEDIA TIC</a></li>
+                    <li><a href="#cuenta">CURSOS DE EMPRENEDORIA</a></li>
+                    <li><a href="#cuenta">FORMACIÓN EN ATENCIÓN DE EMPRESAS</a></li>
+                    <li><a href="#cuenta">CURSOS DE ENCONTRAR TRABAJO</a></li>
+                    <br><br>
+                    <li><a href="#cuenta">CURSOS PROFESIONALES</a></li>
+                    <li><a href="#cuenta">CAPSULAS</a></li>
+                </ul>
+            </div>
+            
 
             <div data-role="main" class="ui-content">
                 <div class="container">
                     <div id="custom-classes" class="cal1"></div> 
-             <script type="text/template" id="clndr-template">
-                <div class="clndr-controls">
-                    <div class="clndr-previous-button">&lsaquo;</div>
-                    <div class="month"><%= month %></div>
-                    <div class="clndr-next-button">&rsaquo;</div>
-                </div>
-                <div class="clndr-grid">
-                    <div class="days-of-the-week">
-                    <% _.each(daysOfTheWeek, function (day) { %>
-                        <div class="header-day"><%= day %></div>
-                    <% }); %>
-                        <div class="days">
-                        <% _.each(days, function (day) { %>
-                            <div class="<%= day.classes %>"><%= day.day %></div>
-                        <% }); %>
-                        </div>
-                    </div>
-                </div>
-                <div class="clndr-today-button">Today</div>
-            </script>
-
-            <script type="text/template" id="clndr-multimonth-template">
+     
+            <script type="text/template" id="clndrTemplate">
                 <div class="multi-month-controls">
-                    <div class="clndr-previous-year-button quarter-button">&laquo;</div><!--
-                    --><div class="clndr-previous-button quarter-button">&lsaquo;</div><!--
-                    --><div class="clndr-next-button quarter-button right-align">&rsaquo;</div><!--
-                    --><div class="clndr-next-year-button quarter-button right-align">&raquo;</div>
+                    <div class="clndr-previous-year-button quarter-button"></div><!--
+                    --><div class="clndr-previous-button quarter-button"></div><!--
+                    --><div class="clndr-next-button quarter-button right-align"></div><!--
+                    --><div class="clndr-next-year-button quarter-button right-align"></div>
                 </div>
                 <% _.each(months, function (oneMonth) { %>
                 <div class="clndr-controls">
@@ -143,27 +137,7 @@
                 <% }); %>
             </script>
 
-            <script type="text/template" id="clndr-oneweek-template">
-                <div class="clndr-controls">
-                    <div class="clndr-previous-button">&lsaquo;</div>
-                    <div class="month">
-                        <%= intervalStart.format('MM/DD') %> - <%= intervalEnd.format('MM/DD') %>
-                    </div>
-                    <div class="clndr-next-button">&rsaquo;</div>
-                </div>
-                <div class="clndr-grid">
-                    <div class="days-of-the-week">
-                    <% _.each(daysOfTheWeek, function (day) { %>
-                        <div class="header-day"><%= day %></div>
-                    <% }); %>
-                        <div class="days">
-                        <% _.each(days, function (day) { %>
-                            <div class="<%= day.classes %>"><%= day.day %></div>
-                        <% }); %>
-                        </div>
-                    </div>
-                </div>
-            </script>
+            
                 </div>
                 
             </div>
