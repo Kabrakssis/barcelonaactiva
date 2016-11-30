@@ -95,11 +95,11 @@ option {
     background-color: #FF8300 !important; 
     border: none;
     color: white !important;
-    padding: 15px 50px;
+    padding: 15px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 100% !important;
+    font-size: 140% !important;
     margin: 4px 2px;
     cursor: pointer;
     width: 75%;
@@ -123,7 +123,7 @@ option {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 100% !important;
+    font-size: 130% !important;
     margin: 4px 2px;
     cursor: pointer;
     width: 30%;
@@ -138,13 +138,28 @@ option {
     box-shadow: 0 5px #666;
     transform: translateY(4px);  
 }
+.col_let_list {
+    color: #FF8300
+    
+    
+    
+    
+}
+#textcursos{
+    color: #000000 !important;
+}
 
 
+h2 {
+    font-size: 18px !important;
+    
+}
 
-
-
-
-
+p5 {
+    font-weight: bold;
+    font-size: 12px;
+ 
+}
 
 
 .btn_login_css {

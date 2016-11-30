@@ -93,7 +93,7 @@
             
             
 
-            <div data-role="main" class="ui-content">
+            <div data-role="main" class="ui-content" data-position="fixed" >
                 <div class="container">
                     <div class="bg_but_cal">  </div>
 
@@ -106,7 +106,7 @@
                     <div id="custom-classes" class="cal1">
 
                     </div> 
-                    <img class="displayed" data-position="bottom" src="img/fondo_calendar.png" alt="Mountain View" style="width:100%;height:55px;"/>
+                    <img src="img/fondo_calendar.png" style="width:100%;height:22%;position:absolute;"/>
            
 
             
@@ -201,22 +201,22 @@
                 <input type="checkbox" name="checkbox-0 "/>Doy mi consentimiento a la nota legal
             </label>
             
-            <a href="#registrado" class="btn_reg ui-btn ui-corner-all">Registrarme</a>
+            <center><a href="#registrado" class="btn_reg ui-btn ui-corner-all">Registrarme</a></center>
         </div><!-- Pagina Registrarse -->
             
         <div data-role="page" data-theme="a" id="registrado">
-            <div data-role="main" class="clearf float-my-child">
-                <img src="img/success_icon.png" width=50>
-                <div>Has sido correctamente registrado</div>
-                <a href="#MainMenu" class="btn_success ui-btn-center">Seguir</a>
+            <div data-role="main" class="clearf float-my-child"><br>
+                <div><img src="img/success_icon.png" width=40>
+                Has sido correctamente registrado</div><br>
+                <center><a href="#MainMenu" class="btn_success ui-btn-center">Seguir</a></center>
             </div>
         
 
          </div><!-- Pagina registrado -->
         
         
-        <div data-role="page" data-theme="a" id="listado"> <!-- Cursos -->
-            <div data-role="header" data-position="fixed" style='background:#F9F8F8;'>
+        <div data-role="page" data-theme="a" id="listado" style="background-color: #dbdbdb" > <!-- Cursos -->
+            <div data-role="header" data-position="fixed" style='background:#dbdbdb;'>
                 <a href="#MainMenu" data-role="button" data-theme="a" class="ui-btn ui-btn-inline-left">Atras</a>
                 <center><img class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:40px;height:40px;position:center"></center>
                 <a href="#filter-calendar" data-position="right" data-icon="filter" data-iconpos="notext">Filter</a> 
@@ -234,19 +234,42 @@
                         <li><a href="#cuenta">CAPSULAS</a></li>
                     </ul>
                 </div>
-                
             </div>    
-
             <div data-role="main">
-                <div></div>
-            
-            
-            
+               <a href="#subscribete" id="textcursos">
+                    <div style="background-color: #ffffff">
+                    <h1 class="col_let_list"> J001-¿Quieres encontrar trabajo? Te explicamos cómo hacerlo?</h1>
+                        <p1> Conductor: Daleph</p1><br>
+                        <p1> Cuando buscas trabajo puede que te surjan muchas preguntas: ¿por donde empiezo ?, ¿Qué necesito ?....</p1>            
+                    </div><br>
+                    <div style="background-color: #ffffff">
+                    <h1 class="col_let_list"> J003-Objetivo laboral: ¡Lo primero que hay que tener para encontrar trabajo!</h1>
+                        <p1> Conductor: Maricel Ruiz i Munné</p1><br>
+                        <p1> Todo camino empieza en uno mismo. Saber de qué quieres trabajar te ahorrará mucho tiempo y te hará más eficaz en la búsqueda de trabajo.</p1>            
+                    </div>
+                </a>
+            </div>   
+        </div> <!-- end page Cursos -->
+        
+        <div data-role="page" data-theme="a" id="subscribete"> <!-- pagina de subscribite -->
+            <div data-role="header"  style='background:#dbdbdb;'>
+                <a href="#listado" data-role="button" data-theme="a" class="ui-btn ui-btn-inline-left">Atras</a>
+                <center><img class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:40px;height:40px;"/></center>
+            </div><br><br>   
+            <div data-role="main">   
+                <h1 class="col_let_list"> J001-¿Quieres encontrar trabajo? Te explicamos cómo hacerlo?</h1>
+                    <p1> Conductor: Daleph</p1><br>
+                    <p1> Duración: 02:00 Horas</p1><br>
+                <h2> Descripción</h2>
+                    <p1> Cúando buscas trabajo puede que te surjan muchas preguntas: ¿por dónde empiezo ?, ¿qué necesito?, ¿dónde busco? ¡No te pierdas con tantas dudas! En ésta actividad, podrás conocer de forma clara y preciosa los pasos que necesitas hacer para iniciar un proceso de búsqueda de trabajo y aprovechar los recursos que Barcelona Activa pone a tu disposición.</p1>
+                <h2> Calendario previsto</h2>
+                    <p5> Jueves dd/mm/aa desde 12:00 hasta 14:00</p1><br>
+                    <p1> Porta 22, Carrer Llacuna, 162 - 164,<br> Barcelona, 08018, 93 401 98 99</p1><br><br>
+                    <p1 class="col_let_list"> Plazas disponibles: 9.</p1><br><br><br><br>
+                    <center><a href="#sub_but" class="btn_reg ui-btn ui-corner-all">Inscribete</a></center>
             </div>
-        
-        </div>
-        
-        
+            
+        </div> <!-- end page subscribete -->
         
         
         <!--<script type="text/javascript" src="cordova.js"></script> -->
