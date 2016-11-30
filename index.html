@@ -108,34 +108,27 @@
 
             <div data-role="main" class="ui-content">
                 <div class="container">
-                    <div id="custom-classes" class="cal1"></div> 
-     
-            <script type="text/template" id="clndrTemplate">
-                <div class="multi-month-controls">
-                    <div class="clndr-previous-year-button quarter-button"></div><!--
-                    --><div class="clndr-previous-button quarter-button"></div><!--
-                    --><div class="clndr-next-button quarter-button right-align"></div><!--
-                    --><div class="clndr-next-year-button quarter-button right-align"></div>
-                </div>
-                <% _.each(months, function (oneMonth) { %>
-                <div class="clndr-controls">
-                    <div class="month"><%= oneMonth.month.format('MMMM YYYY') %></div>
-                </div>
-                <div class="clndr-grid">
-                    <div class="days-of-the-week">
-                    <% _.each(daysOfTheWeek, function (day) { %>
-                        <div class="header-day"><%= day %></div>
-                    <% }); %>
-                        <div class="days">
-                        <% _.each(oneMonth.days, function (day) { %>
-                            <div class="<%= day.classes %>"><%= day.day %></div>
-                        <% }); %>
-                        </div>
+                    <div class="bg_but_cal">  </div>
+                    
+                    
+                    
+                    <div class="clearfix float-my-children">
+                       <img src="img/orientate.png" width=20>
+                       <div>Consulta las actividades de este bloque e inscribete a la que te interesa</div>
                     </div>
-                </div>
-                <div class="clndr-today-button">Today</div>
-                <% }); %>
-            </script>
+
+                   
+                    
+                    
+                    <div id="custom-classes" class="cal1">
+                        
+                    
+                    
+                    
+                    
+                    </div> 
+                    <img class="displayed" data-position="bottom" src="img/fondo_calendar.png" alt="Mountain View" style="width:100%;height:55px;"/>
+           
 
             
                 </div>
@@ -146,14 +139,19 @@
             </div><!--end page -->    
            
                 
-            
-    
-
+            <div data-role="page" class="ui-content" id="trabajo"> <!-- Pagina Trabajo -->
+                <div data-role="header" id="head_trabajo"><a href="#MainMenu" data-role="button" data-theme="a" class="ui-btn-inline-right">Atras</a></div>
+                
+                <div data-role="main" id="trabajo_list">
+                <img class="displayed" data-position="bottom" src="img/trabajo.png" style="width:95%;height:100%;"/>
+                </div>
+                
         
-        
+            </div><!--end page -->
         
         <div data-role="page" data-theme="a" id="registrarse"><!-- Pagina Registrarse -->
-            <div data-role="header" style="display" id="bg_reg_head"><img class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:75px;height:75px;"/>
+            <div data-role="header" style="display" id="bg_reg_head">
+                <center><img class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:75px;height:75px;"/></center>
                 <a href="#login" data-role="button" data-theme="a" class="ui-btn ui-btn-inline-left">Atras</a>
                 <a href="#" data-icon="gear" class="ui-btn-right">CAS</a>
             </div>
@@ -224,30 +222,31 @@
                 <input type="checkbox" name="checkbox-0 "/>Doy mi consentimiento a la nota legal
             </label>
             
-            <a href="#" class="btn_reg ui-btn ui-corner-all">Registrarme</a>
+            <a href="#registrado" class="btn_reg ui-btn ui-corner-all">Registrarme</a>
         </div><!-- Pagina Registrarse -->
             
+        <div data-role="page" data-theme="a" id="registrado">
+            <div data-role="main" class="clearf float-my-child">
+                <img src="img/success_icon.png" width=50>
+                <div>Has sido correctamente registrado</div>
+                <a href="#MainMenu" class="btn_success ui-btn-right">Seguir</a>
+            </div>
+        
+
+         </div><!-- Pagina registrado -->
         
         
-        <div data-role="page" data-theme="a" id="capsulas"> <!-- pagina Cursos, capsulas -->
-            <div data-role="header" style="display" id="bg_reg_head"><img class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:75px;height:75px;">
-                <a href="#calendar" data-role="button" data-theme="a" class="ui-btn ui-btn-inline-left">Atras</a>
+        <div data-role="page" data-theme="a" id="cursos"> <!-- Cursos -->
+            <div data-role="main">
+            
+            
+            
+            
             </div>
-            
-            <div data-role="main" class="ui-content" id="cap_content">
-                
-                
-                
-                
-            </div>
-            
-            
-            
-            
-            
-            
-            
-        </div> <!-- end page-->
+        
+        </div>
+        
+        
         
         
         <!--<script type="text/javascript" src="cordova.js"></script> -->

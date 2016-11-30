@@ -25,16 +25,50 @@ html[xmlns] .clearfix {
   /* IE10+ */
 }
 
-
-p {
-  text-align: center;
-  font-family: 'Droid Sans Mono';
-  margin: 3em auto 1em auto;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  border-bottom: 2px solid white;
-  background: #f4f4f4;
+.float-my-children > * {
+    float:left;
+    margin-right:5px;
+    text-align: center;
+    font-size: 11px;
 }
+.clearfix {
+    *zoom:1 /* for IE */
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+.float-my-child > * {
+    float:center;
+    margin-right:5px;
+    text-align: center;
+    font-size: 14px;
+}
+.clearf {
+    *zoom:1 /* for IE */
+}
+
+.clearf:before,
+.clearf:after {
+    content: " ";
+    display: table;
+}
+
+.clearf:after {
+    clear: both;
+}
+    
+    
+    
+
 .left-align {
   text-align: left;
 }
@@ -204,29 +238,11 @@ p {
   border-bottom: 1px solid #000000;
 }
 
-.ui-datepicker-prev {
-    background: url(../img/caret-left.png)no-repeat;
-    background-position: 0px 0px !important;
-    
-}
-
-.ui-datepicker-next {
-    background: url(../img/caret-right.png)no-repeat;
-    background-position: 0px 0px !important;
-    
-    
-}
 
 
 
-.clndr-next-button { 
-    background: url(../img/caret-right.png)no-repeat;
-    
-    background-size: cover;
-    
-    width: 1%;
-    height: 1%;
-}
+
+.clndr-next-button,
 .clndr-previous-button, 
     
     

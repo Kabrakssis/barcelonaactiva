@@ -35,9 +35,11 @@ $(document).ready( function() {
     // has changed, and finally onYearChange (if the year changed).
     calendars.clndr1 = $('.cal1').clndr({
         events: eventArray,
+        
         clickEvents: {
             click: function (target) {
                 console.log('Cal-1 clicked: ', target);
+                alert("hola");
             },
             today: function () {
                 console.log('Cal-1 today');
