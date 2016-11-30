@@ -39,7 +39,10 @@ $(document).ready( function() {
         clickEvents: {
             click: function (target) {
                 console.log('Cal-1 clicked: ', target);
-                alert("hola");
+                
+
+$.mobile.navigate( "#listado", { transition: "slideup", changeHash: false });
+
             },
             today: function () {
                 console.log('Cal-1 today');

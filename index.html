@@ -77,55 +77,34 @@
             
             <div data-role="header" data-position="fixed" style='background:#F9F8F8;'>
                 <a href="#filter-menu" data-icon="bars" data-iconpos="notext">Menu</a>
-                <center><img class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:40px;height:40px;position:center"></center>
-                <a href="#filter-calendar" data-icon="filter" data-iconpos="notext">Filter</a>     
+                <div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="b" id="filter-menu">
+                    <ul data-role="listview">
+                        <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menu</a></li>
+                        <li><a href="#MainMenu">CALENDAR</a></li>
+                        <li><a href="#trabajo">TRABAJO</a></li>
+                        <li><a href="#cuenta">MI CUENTA</a></li>
+
+                    </ul>
+                </div>
             </div>
             
-            <div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="b" id="filter-menu">
-                <ul data-role="listview">
-                    <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menu</a></li>
-                    <li><a href="#MainMenu">CALENDAR</a></li>
-                    <li><a href="#trabajo">TRABAJO</a></li>
-                    <li><a href="#cuenta">MI CUENTA</a></li>
-                
-                </ul>
-            </div>
             
-            <div data-role="panel" data-position="right" data-display="overlay" data-theme="b" id="filter-calendar">
-                <ul data-role="listview">
-                    <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menu</a></li>
-                    <li><a href="#MainMenu">CURSOS DE PORTA 22</a></li>
-                    <li><a href="#trabajo">CIBERNARIUM - MEDIA TIC</a></li>
-                    <li><a href="#cuenta">CURSOS DE EMPRENEDORIA</a></li>
-                    <li><a href="#cuenta">FORMACIÓN EN ATENCIÓN DE EMPRESAS</a></li>
-                    <li><a href="#cuenta">CURSOS DE ENCONTRAR TRABAJO</a></li>
-                    <br><br>
-                    <li><a href="#cuenta">CURSOS PROFESIONALES</a></li>
-                    <li><a href="#cuenta">CAPSULAS</a></li>
-                </ul>
-            </div>
+            
+            
             
 
             <div data-role="main" class="ui-content">
                 <div class="container">
                     <div class="bg_but_cal">  </div>
-                    
-                    
-                    
+
                     <div class="clearfix float-my-children">
+                        <br><br>
                        <img src="img/orientate.png" width=20>
                        <div>Consulta las actividades de este bloque e inscribete a la que te interesa</div>
                     </div>
 
-                   
-                    
-                    
                     <div id="custom-classes" class="cal1">
-                        
-                    
-                    
-                    
-                    
+
                     </div> 
                     <img class="displayed" data-position="bottom" src="img/fondo_calendar.png" alt="Mountain View" style="width:100%;height:55px;"/>
            
@@ -229,16 +208,37 @@
             <div data-role="main" class="clearf float-my-child">
                 <img src="img/success_icon.png" width=50>
                 <div>Has sido correctamente registrado</div>
-                <a href="#MainMenu" class="btn_success ui-btn-right">Seguir</a>
+                <a href="#MainMenu" class="btn_success ui-btn-center">Seguir</a>
             </div>
         
 
          </div><!-- Pagina registrado -->
         
         
-        <div data-role="page" data-theme="a" id="cursos"> <!-- Cursos -->
+        <div data-role="page" data-theme="a" id="listado"> <!-- Cursos -->
+            <div data-role="header" data-position="fixed" style='background:#F9F8F8;'>
+                <a href="#MainMenu" data-role="button" data-theme="a" class="ui-btn ui-btn-inline-left">Atras</a>
+                <center><img class="displayed" src="img/LOGO_a.png" alt="Mountain View" style="width:40px;height:40px;position:center"></center>
+                <a href="#filter-calendar" data-position="right" data-icon="filter" data-iconpos="notext">Filter</a> 
+                
+                <div data-role="panel" data-position="right" data-display="overlay" data-theme="b" id="filter-calendar">
+                    <ul data-role="listview">
+                        <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menu</a></li>
+                        <li><a href="#MainMenu">CURSOS DE PORTA 22</a></li>
+                        <li><a href="#trabajo">CIBERNARIUM - MEDIA TIC</a></li>
+                        <li><a href="#cuenta">CURSOS DE EMPRENEDORIA</a></li>
+                        <li><a href="#cuenta">FORMACIÓN EN ATENCIÓN DE EMPRESAS</a></li>
+                        <li><a href="#cuenta">CURSOS DE ENCONTRAR TRABAJO</a></li>
+                        <br><br>
+                        <li><a href="#cuenta">CURSOS PROFESIONALES</a></li>
+                        <li><a href="#cuenta">CAPSULAS</a></li>
+                    </ul>
+                </div>
+                
+            </div>    
+
             <div data-role="main">
-            
+                <div></div>
             
             
             
